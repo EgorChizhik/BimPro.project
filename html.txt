@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Bimpro Site</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="https://i.yapx.ru/Xj4BN.jpg" alt="Bimpro Logo">
+      </div>
+      <nav>
+        <ul>
+          <li class="no-style"><a href="#">Услуги<span class="underline"></span></a></li>
+          <li class="no-style"><a href="#">Преимущества<span class="underline"></span></a></li>
+          <li class="no-style"><a href="#">Проекты<span class="underline"></span></a></li>
+          <li class="no-style"><a href="#">Команда<span class="underline"></span></a></li>
+          <li class="no-style"><a href="#">Гарантии<span class="underline"></span></a></li>
+          <li class="no-style"><a href="#">Контакты<span class="underline"></span></a></li>
+        </ul>
+      </nav>
+      <div class="contact">
+        <div class="phone">+7 812 330 10 40</div>
+        <div class="email">project@bimpro.ru</div>
+      </div>
+    </div>
+  </header>
+  <main>
+
+    <section class="hero-section">
+      <div class="container">
+        <div class="content">
+          <h1>
+            <span>ВИЗУАЛИЗАЦИЯ</span>
+            <span>ЛЮБОЙ</span>
+            <span>СЛОЖНОСТИ</span>
+          </h1>
+          <div class="txt1-blok">
+          <p>Профессиональная команда <span>BIMpro </span>предлагает полный комплекс услуг по разработке и согласованию проектной документации любой сложности в кратчайшие сроки.</p>
+          </div>
+          <a href="#" class="btn">Рассчитать стоимость проекта</a>
+        </div >
+        <div class="photo-hero"><img src="https://i.pinimg.com/originals/b5/cb/3e/b5cb3e96197f9258225a438d49e44c64.jpg"></div>
+      </div>
+    </section>
+     <section class="services-section">
+       <div class="services-header">
+          <h3>НАШИ УСЛУГИ</h3>
+        </div>
+      <div class="container">
+       
+        <div class="services-list">
+          <div class="service-item">
+            <div class="service-icon">
+              <img src="https://i.yapx.ru/Xj36F.jpg" alt="Icon 1">
+            </div>
+            <div class="service-text">Визуализация
+комплексной застройки</div>
+          </div>
+          <div class="service-item">
+            <div class="service-icon">
+              <img src="https://i.yapx.ru/Xj39Z.jpg" alt="Icon 2">
+            </div>
+            <div class="service-text">Архитектурная
+визуализация</div>
+          </div>
+          <div class="service-item">
+            <div class="service-icon">
+              <img src="https://i.yapx.ru/Xj39z.jpg" alt="Icon 3">
+            </div>
+            <div class="service-text">Интерьерная
+визуализация</div>
+          </div>
+          <div class="service-item">
+            <div class="service-icon">
+              <img src="https://i.yapx.ru/Xj4AB.jpg" alt="Icon 4">
+            </div>
+            <div class="service-text">Предметная и рекламная
+визуализация</div>
+          </div>
+          <div class="service-item">
+            <div class="service-icon">
+              <img src="https://i.yapx.ru/Xj4AN.jpg" alt="Icon 5">
+            </div>
+            <div class="service-text">3D, VR и видео
+материалы</div>
+          </div>
+          <div class="service-item">
+            <div class="service-icon">
+              <img src="https://i.yapx.ru/Xj4AU.jpg" alt="Icon 6">
+            </div>
+            <div class="service-text">Дополнительные
+материалы</div>
+          </div>
+        </div>
+      </div>
+    </section>
+     <section class="advantages-section">
+      <div class="container2">
+        <div class="advantage-item">
+          <div class="advantage-title">СКИДКА ДО 50%</div>
+          <div class="advantage-text">ПРИ ЗАКАЗЕ ОТ 20 000м²</div>
+        </div>
+        <div class="advantage-item">
+          <div class="advantage-title">СКИДКА ДО 5%</div>
+          <div class="advantage-text">НА ПОСЛЕДУЮЩИЕ ЗАКАЗЫ</div>
+        </div>
+        <div class="advantage-item">
+          <div class="advantage-title">5 РАБОЧИХ ДНЕЙ</div>
+          <div class="advantage-text">СРЕДНИЙ СРОК ИСПОЛНЕНИЯ</div>
+        </div>
+        <div class="advantage-item">
+          <div class="advantage-title">БЕСПЛАТНАЯ КОНСУЛЬТАЦИЯ</div>
+          <div class="advantage-text">ПО ЛЮБЫМ ВОПРОСАМ</div>
+        </div>
+      </div>
+
+    </section>
+    <section class="benefits-section">
+
+  <div class="container-benefits">
+    <div class="benefits-header">
+      <h3>Преимущества нашей команды</h3>
+    </div>
+    <div class="benefits-block">
+      <p>Почему стоит выбрать <span>BIMpro</span>? Мы предоставляем уникальные преимущества, которые делают нашу работу эффективной и качественной:</p>
+      <ul>
+        <li >Широкий опыт в сфере визуализации и проектирования.</li>
+        <li>Индивидуальный подход к каждому клиенту и проекту.</li>
+        <li>Использование инновационных технологий и методов.</li>
+        <li>Соблюдение сроков и высокой качества выполнения работ.</li>
+        <li>Постоянная поддержка и консультации на всех этапах.</li>
+      </ul>
+      <br>
+      <p>Доверьтесь профессионалам и узнайте, как мы можем помочь вам в вашем проекте!</p>
+    </div>
+  </div>
+</section>
+   <section class="promo-section">
+  <div class="promo-container">
+    <div class="promo-text">
+      <div class="promo-overlay">
+        <div class="promo-percentage">+20%</div>
+        <div class="promo-footnote-wrapper">*По данным ГК "Первый Трест" № 12 среди российских застройщиков в рейтинге EP3, клиент "БИМПРО"</div>
+      </div>
+      <div class="promo-title">
+        <span>ВИЗУАЛИЗИРОВАННАЯ.</span>
+        <span>НЕДВИЖИМОСТЬ ПРОДАЕТСЯ</span>
+        <span>НА 20% БЫСТРЕЕ!</span>
+      </div>
+    </div>
+    <div class="promo-image">
+      <img src="https://avatars.mds.yandex.net/i?id=53ab53a0f2e8da8c2c3e0580d91322c6b15bb8fa-9857494-images-thumbs&n=13" alt="Hero Image">
+    </div>
+  </div>
+</section>
+<section class="about-section">
+  <div class="about-container">
+    <div class="about-left">
+      <div class="about-title">
+        <span class="about-title-orange"><i class="ri-arrow-right-s-line"></i>  КАК </span>
+        <span class="about-title-white">МЫ ПОМОЖЕМ ВАШЕМУ БИЗНЕСУ</span>
+      </div>
+         <div class="hr-1">
+       <hr>
+       </div>
+      <div class="about-title">
+        <span class="about-title-orange">КОМУ</span>
+        <span class="about-title-white">НАШИ РЕШЕНИЯ ПОМОГУТ</span>
+     
+     
+       </div>
+      <div class="hr-1">
+       <hr>
+       </div>
+      <div class="about-title">
+        <span class="about-title-orange">ПОДРОБНЕЕ</span>
+        <span class="about-title-white">О НАШЕЙ РАБОТЕ</span>
+      </div>
+    </div>
+    <div class="about-right">
+      <div class="about-feature">
+        <div class="about-feature-title about-feature-title-orange"><p><i class="ri-arrow-down-s-line"></i> Снизить количество ошибок</p>
+
+        </div>
+        <div class="about-feature-title-txt">
+<p>Перспективные изображения являются неотъемлемой частью пакета документов АР, используются в ходе проведения ремонтных работ и необходимы при авторском надзоре 
+</p>
+        </div>
+        <div class="about-feature-divider"></div>
+        <div class="about-feature-title"> <i class="ri-arrow-down-s-line"></i> Согласовать проект с заказчиком</div>
+        <div class="about-feature-divider"></div>
+        <div class="about-feature-title"><i class="ri-arrow-down-s-line"></i> Повысить привлекательность проекта</div>
+        <div class="about-feature-divider"></div>
+        <div class="about-feature-title"><i class="ri-arrow-down-s-line"></i> Выделиться на фоне конкуррентов</div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="steps-section">
+  <div class="steps-container">
+    <div class="steps-title">
+      <p class="steps-title-orange"> <span>5</span><span>Ш</span><span>А</span><span>Г</span><span>О</span><span>В</span>
+      <b>РАБОТЫ С НАМИ </b></p>
+    </div>
+    <div class="steps-content">
+      <div class="steps-item">
+        <div class="steps-number steps-number-orange">1</div>
+        <div class="steps-word steps-word-orange">Оставьте</div>
+        <div class="steps-word steps-word-white">заявку</div>
+    
+      </div>
+
+
+<div class="arrow-1">
+    <div></div>
+</div>
+      <div class="steps-item">
+        <div class="steps-number steps-number-orange">2</div>
+        <div class="steps-word steps-word-orange">Получите </div>
+        <div class="steps-word steps-word-white">бесплатный расчет стоимости и сроков</div>
+        
+      </div>
+      <div class="arrow-1">
+    <div></div>
+</div>
+      <div class="steps-item">
+        <div class="steps-number steps-number-orange">3</div>
+        <div class="steps-word steps-word-orange">Заключите договор </div>
+        <div class="steps-word steps-word-white">и внесите аванс</div>
+      
+      </div>
+    <div class="arrow-1">
+    <div></div>
+</div>
+      <div class="steps-item">
+        <div class="steps-number steps-number-orange">4</div>
+         <div class="steps-word steps-word-orange">Мы разработаем </div>
+        <div class="steps-word steps-word-white">визуализации</div>
+       
+      </div>
+     <div class="arrow-1">
+    <div></div>
+</div>
+      <div class="steps-item">
+        <div class="steps-number steps-number-orange">5</div>
+        <div class="steps-word steps-word-orange">Получите</div>
+        <div class="steps-word steps-word-white">готовые материалы</div>
+      </div>
+    </div>
+   
+  <div class="steps-button">
+        <button class="steps-btn">Оставить заявку</button>
+        <div class="form-container">
+            <h3>Форма заявки</h3>
+            <div class="form-field">
+                <input type="text" id="name" placeholder="Ваше имя" maxlength="30" required />
+            </div>
+            <div class="form-field">
+                <input type="email" id="email" placeholder="Ваш email" maxlength="50" required />
+            </div>
+            <div class="form-field">
+                <input type="text" id="message" placeholder="Сообщение" maxlength="200" required />
+            </div>
+            <div class="form-field">
+                <button type="button" onclick="clearFields()">Отправить</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function clearFields() {
+            document.getElementById('name').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('message').value = '';
+        }
+        
+
+    </script>
+ 
+  </div>
+</section>
+<section class="visualization-section">
+  <div class="visualization-container">
+    <div class="visualization-image">
+      <img src="https://static.tildacdn.com/tild6439-6632-4733-b061-633165316531/Housing_estate_2-2.jpg" alt="Визуализация комплексной застройки">
+    </div>
+    <div class="visualization-content1">
+      <h2 class="visualization-title">ВИЗУАЛИЗАЦИЯ КОМПЛЕКСНОЙ ЗАСТРОЙКИ</h2>
+      <p class="visualization-subtitle"> <i class="ri-arrow-down-s-line"></i> Визуализация жилых комплексов</p>
+      <div class="visualization-divider"></div>
+      <p class="visualization-text"> <i class="ri-arrow-down-s-line"></i> Визуализация благоустройства территории</p>
+      <div class="visualization-divider"></div>
+      <div class="visualization-button">
+        <button class="visualization-btn">Оставить заявку</button>
+      </div>
+    </div>
+  </div>
+   <div class="visualization-container">
+    <div class="visualization-image">
+      <img src="https://img.freepik.com/free-photo/modern-residential-district-with-green-roof-balcony-generated-by-ai_188544-10276.jpg?t=st=1718615707~exp=1718619307~hmac=6e265d5ee2b523ff70f238400fc5bec8e146604c6065503dbd7fa8d72f3bf382&w=1060" alt="Визуализация комплексной застройки">
+    </div>
+    <div class="visualization-content2">
+      <h2 class="visualization-title">АРХИТЕКТУРНАЯ ВИЗУАЛИЗАЦИЯ</h2>
+      <p class="visualization-subtitle"> <i class="ri-arrow-down-s-line"></i> Визуализация жилых зданий</p>
+      <div class="visualization-divider"></div>
+      <p class="visualization-text"> <i class="ri-arrow-down-s-line"></i> Визуализация общественных, промышленных
+и складских зданий</p>
+      <div class="visualization-divider"></div>
+      <div class="visualization-button">
+        <button class="visualization-btn">Оставить заявку</button>
+      </div>
+    </div>
+  </div>
+  <div class="visualization-container">
+    <div class="visualization-image">
+      <img src="https://img.freepik.com/free-photo/3d-rendering-loft-luxury-living-room-with-shelf-near-dining-table-counter_105762-2105.jpg?t=st=1718615794~exp=1718619394~hmac=f0bdded0b5ea0e4453435b8894300560c413cae9a6a074f2932ab7411f9b2a18&w=996" alt="Визуализация комплексной застройки">
+    </div>
+    <div class="visualization-content3">
+      <h2 class="visualization-title">ИНТЕРЬЕРНАЯ ВИЗУАЛИЗАЦИЯ</h2>
+      <p class="visualization-subtitle"> <i class="ri-arrow-down-s-line"></i> Визуализация общественных пространств</p>
+      <div class="visualization-divider"></div>
+      <p class="visualization-text"> <i class="ri-arrow-down-s-line"></i> Комплексная визуализация жилых помещений 
+</p>
+      <div class="visualization-divider"></div>
+      <div class="visualization-button">
+        <button class="visualization-btn">Оставить заявку</button>
+      </div>
+    </div>
+  </div>
+    <div class="visualization-container">
+    <div class="visualization-image">
+      <img src="https://img.freepik.com/free-photo/full-shot-woman-sitting-couch_23-2149729041.jpg?t=st=1718615937~exp=1718619537~hmac=48689ffe744a79827fc205d0a59d5582d8f0b632c618a566344fdd3fd63650e5&w=740" alt="Визуализация комплексной застройки">
+    </div>
+    <div class="visualization-content4">
+      <h2 class="visualization-title">РЕКЛАМНАЯ И ПРЕДМЕТНАЯ ВИЗУАЛИЗАЦИЯ</h2>
+      <p class="visualization-subtitle"> <i class="ri-arrow-down-s-line"></i> Визуализация для каталогов мебели, декора, освещения</p>
+      <div class="visualization-divider"></div>
+      <div class="visualization-button">
+        <button class="visualization-btn">Оставить заявку</button>
+      </div>
+    </div>
+  </div>
+    <div class="visualization-container">
+    <div class="visualization-image">
+      <img src="https://img.freepik.com/free-photo/videographer-using-editing-software-vr-glasses-design-montage-movie-production-edit-film-footage-with-visual-effects-computer-working-with-virtual-reality-goggles_482257-46813.jpg?t=st=1718615979~exp=1718619579~hmac=50070a518b26ad7288d9718971703d88b3726feef43bf2e1766bd3efd0714cee&w=900" alt="Визуализация комплексной застройки">
+    </div>
+    <div class="visualization-content5">
+      <h2 class="visualization-title">3D, VR и видео материалы</h2>
+      <p class="visualization-subtitle"><i class="ri-arrow-down-s-line"></i> VR и 3D виртуальные туры</p>
+      <div class="visualization-divider"></div>
+      <p class="visualization-text"><i class="ri-arrow-down-s-line"></i> 3D облет 360°</p>
+      <div class="visualization-divider"></div>
+       <p class="visualization-subtitle"><i class="ri-arrow-down-s-line"></i> 3D видео туры</p>
+      <div class="visualization-divider"></div>
+      <p class="visualization-text"> <i class="ri-arrow-down-s-line"></i> Анимация</p>
+      <div class="visualization-divider"></div>
+      <div class="visualization-button">
+        <button class="visualization-btn">Оставить заявку</button>
+      </div>
+    </div>
+  </div>
+    <div class="visualization-container">
+    <div class="visualization-image">
+      <img src="https://img.freepik.com/premium-photo/condo-project-black_190619-69.jpg?w=900" alt="Визуализация комплексной застройки">
+    </div>
+    <div class="visualization-content6">
+      <h2 class="visualization-title">ДОПОЛНИТЕЛЬНЫЕ ПРЕЗЕНТАЦИОННЫЕ МАТЕРИАЛЫ</h2>
+      <p class="visualization-subtitle"><i class="ri-arrow-down-s-line"></i> Планировочные схемы</p>
+      <div class="visualization-divider"></div>
+      <p class="visualization-text"><i class="ri-arrow-down-s-line"></i> Визуализация генплана</p>
+      <div class="visualization-divider"></div>
+        <p class="visualization-subtitle"> <i class="ri-arrow-down-s-line"></i> Визуализация фасадов</p>
+      <div class="visualization-divider"></div>
+      <p class="visualization-text"> <i class="ri-arrow-down-s-line"></i> Композиции с материалами</p>
+      <div class="visualization-divider"></div>
+      <div class="visualization-button">
+        <button class="visualization-btn">Оставить заявку</button>
+      </div>
+    </div>
+  </div>
+ 
+</section>
+<section>
+  <div class="project-title-h3">
+    <h2>Какие проекты мы уже реализовали?</h2>
+  </div>
+
+ <div class="vis-pro-container">
+          <div class="text-block-proj">
+            <h4>Комплекс "Экоград"</h4>
+            <div class="p-text-block-proj">
+            <p>
+
+     Комплекс "Экоград" был разработан с целью создания
+                высококачественного жилого пространства, которое гармонично
+                вписывается в природу. При разработке проекта активно
+                использовались зеленые технологии, что позволило уменьшить
+                его углеродный след.
+            </p>
+            <p>
+                Уникальный ландшафтный дизайн и современные материалы
+                обеспечивают максимальный комфорт для жильцов и
+                экологическую безопасность. Внутренние пространства
+                спроектированы с учетом удобства и функциональности.
+            </p>
+        </div>
+</div>
+        <div class="projects-list">
+            <div class="project1">
+                <h3 class="project-title">Комплекс "Экоград"</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="vis-pro-container">
+        <div class="text-block-proj">
+            <h4>Офисный центр "Динамика"</h4>
+            <div class="p-text-block-proj">
+            <p>
+                Офисный центр "Динамика" создан для предоставления
+                высококачественных офисных помещений, которые отвечают
+                современным требованиям бизнеса. Подходящее место для
+                стартапов и крупных компаний, он предлагает уникальные
+                пространства для эффективной работы.
+            </p>
+            <p>
+                Спроектированный с акцентом на экологичность, центр
+                использует новейшие технологии для снижения потребления
+                энергии, обеспечивая одновременно комфорт и стиль.
+            </p>
+             </div>
+        </div>
+
+        <div class="projects-list">
+            <div class="project2">
+                <h3 class="project-title">Офисный центр "Динамика"</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="vis-pro-container">
+        <div class="text-block-proj">
+            <h4>Торговый комплекс "Гармония"</h4>
+            <div class="p-text-block-proj">
+            <p>
+                Торговый комплекс "Гармония" стал новым центром для шопинга
+                и развлечений в городе. Предлагая широкий выбор торговых
+                точек и развлекательных услуг, он создает уникальную
+                атмосферу для покупок и отдыха.
+            </p>
+            <p>
+                Архитектура комплекса сочетает в себе современный стиль
+                и уют, что делает его привлекательным для всех возрастов.
+                Устойчивость и легкость — ключевые аспекты, учтенные при
+                проектировании.
+            </p>
+            </div>
+        </div>
+
+        <div class="projects-list">
+            <div class="project3">
+                <h3 class="project-title">Торговый комплекс "Гармония"</h3>
+            </div>
+        </div>
+    </div>
+    </section>
+
+  </main>
+   <footer>
+<div class="footer-grid">
+          
+            <div>
+ <div class="logo-foot">
+        <img src="https://i.yapx.ru/Xj4kG.png" alt="Bimpro Logo">
+      </div>
+                <p>г. Санкт-Петербург, Шпалерная ул. д. 51 </p>
+                <p>График работы:</p>
+                <p>ПН-ПТ 9:00 — 18:00</p>
+                <p>СБ, ВС — Выходные</p>
+            </div>
+            <div class="pol_conf_number_email">
+                <p>+7 812 330 10 40</p>
+                <p>project@bimpro.ru</p>
+                <br>
+                <div class="confidential">
+                <a href="" class="link" data-terms-of-use="Условия использования"><u>Политика конфиденциальности</u></a>
+                </div>
+            </div>
+            
+        </div>
+        <div class="hr-2">
+          <hr>
+        </div>
+        <div class="footer-down">
+      
+            <p>Все права защищены ООО ”БИМПРО”</p>
+        </div>
+    </footer>
+</body>
+</html>
