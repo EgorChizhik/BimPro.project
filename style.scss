@@ -173,7 +173,6 @@ animation: animate_pulse 1.6s infinite;
 }
 .service-item {
   background-color: #191919;
-  border: 1px solid #333;
   display: flex;
   align-items: center;
   @include padd(17px);
@@ -220,7 +219,7 @@ display: flex;
     width: 239px;
     background-color: lighten(#222224, $i * 2.5%); 
     @include padd(20px);
-    border: 1px solid #333;
+    @include darkgr();
     border-top: none;
   }
 }
@@ -321,7 +320,7 @@ justify-content: space-between;
   left: 50px;
   width: 140px;
   height: 132px;
-  border: 1px solid #fff;
+  border: 1px solid #primary-color;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -349,9 +348,7 @@ justify-content: space-between;
   }
 .promo-percentage {
      margin: if($bg-color-promo == DarkColor, $marg-promo-s,$marg-promo-s * 1);
-      font-size: 36px;
-  font-weight: bold;
-  color: #ff6b00;
+      @include Heading(36px, bold, $OrangeColor);
   margin-top: 71px;
   margin-left: 20px;
   transition-delay: 0.4s;
@@ -397,6 +394,106 @@ justify-content: space-between;
     height: 436px;
     }
   }
+
   @include promo-image();
     }
+} 
+
+/*About-section*/
+
+
+.about-section {
+  background-color: $DarkColor;
+  padding: 0;
+  margin-top: -133px;
+  margin-bottom: 150px;
 }
+
+.about-container {
+  display: flex;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.about-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 50px;
+  width: 457px;
+  @include darkgr-r();
+}
+
+.about-title {
+  @include Heading(26px, bold, $primary-color);
+  line-height: 1.2;
+  margin-bottom: 20px;
+  width: 431px;
+  transition: transform 0.6s ease;
+}
+
+
+$title-colors-about: (
+  orange: $OrangeColor,
+  white: $primary-color
+);
+
+// Итерация по цветам для заголовков
+@for $i from 1 through length($title-colors-about) {
+  $color: nth(map-keys($title-colors-about), $i);
+  $value: map-get($title-colors-about, $color);
+
+  .about-title-#{$color} {
+    color: $value;
+  }
+
+  .about-feature-title-#{$color} {
+    color: $value;
+  }
+}
+
+.about-right {
+  flex: 0.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 50px;
+  border-bottom: 1px solid rgba(158, 158, 158, .2);
+}
+
+.about-feature {
+  width: 100%;
+}
+
+.about-feature-title {
+  @include Heading(17px, bold, $primary-color);
+  margin-bottom: 20px;
+}
+
+.about-feature-divider {
+  width: 100%;
+  height: 1px;
+  @include darkgr();
+  margin-bottom: 20px;
+}
+
+.hr-1 hr {
+  margin-bottom: 20px;
+  opacity: 0.2;
+  width: 375px;
+}
+
+.about-feature-title-txt {
+  width: 554px;
+
+  p {
+    margin-bottom: 15px;
+  }
+}
+.ri-arrow-down-s-line{
+  font-size: 22px;
+}
+.about-title:hover{
+ transform: translateX(10px);
+}
+/* steps-section*/
