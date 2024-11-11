@@ -3,7 +3,21 @@
   font-weight:$fontW ;
   color: $fontColor;
 }
-
+@mixin darkgr(){
+  border: 1px solid #333;
+}
+@mixin darkgr-r(){
+  border-right: 1px solid #333;
+}
+@mixin darkgr-l(){
+  border-left: 1px solid #333;
+}
+@mixin darkgr-b(){
+  border-bottom: 1px solid #333;
+}
+@mixin darkgr-t(){
+  border-top: 1px solid #333;
+}
 @mixin padd($padd...){
   padding: $padd;
 }
