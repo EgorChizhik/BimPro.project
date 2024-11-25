@@ -1,3 +1,7 @@
+@use 'sass:color';
+@use 'sass:math';
+
+
 @import 'variables';
 @import 'mixins';
 
@@ -61,6 +65,7 @@ nav{
    background: linear-gradient(-45deg, #FFA500, #FF8C00, #00BFFF, #FFA500);
    animation: animate_gradient 5s ease infinite;
    background-size: 400% 400%;
+filter: brightness(110%);
 }
 .contact {
   @include marg(0 0 0 auto);
@@ -160,16 +165,19 @@ animation: animate_pulse 1.6s infinite;
     
   @include marg(0 0 80px 0);
 }
-.services-header, .benefits-header, .form-container, .project-title-h3{
+.services-header, .benefits-header, .form-container{
   h3{
     @include Heading(24px, bold ,$primary-color);
   
   }
 }
-.services-list {
+.services-list{
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 30px;
+
+  @supports (display: grid) {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px;
+    }
 }
 .service-item {
   background-color: #191919;
@@ -213,6 +221,7 @@ display: flex;
 
 @for $i from 1 through 4 {
   .advantage-item-#{$i} {
+
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); 
     text-align: center;
     height: 100px;
@@ -221,6 +230,7 @@ display: flex;
     @include padd(20px);
     @include darkgr();
     border-top: none;
+
   }
 }
 .advantage-title {
@@ -271,6 +281,7 @@ display: flex;
   counter-increment: section;
    @include marg(0 0 10px 0);
 
+   
  ::before {
   content: counter(section) ". ";
 }
@@ -354,11 +365,18 @@ justify-content: space-between;
   transition-delay: 0.4s;
   transition-timing-function: ease-in;
   transition-duration: 0.6s;
+   filter: saturate(75%);
    @if $bg-color-promo == OrangeColor { 
  font-size: 46px;
     } 
     &:hover {
-  transform: matrix(0.766, -0.7, 0.8, 0.866, -5, -30);
+      .element {
+    -webkit-transform: matrix(0.766, -0.7, 0.8, 0.866, -5, -30); // Chrome/Safari
+    -moz-transform: matrix(0.7, -0.6, 0.7, 0.9, -10, -20); // Firefox 
+    -ms-transform: matrix(0.76, -0.68, 0.79, 0.85, -7, -25); // IE 
+    transform: matrix(0.766, -0.7, 0.8, 0.866, -5, -30);
+}
+filter: saturate(100%);
 }
 @include promo-percentage();
   }
@@ -369,9 +387,10 @@ justify-content: space-between;
      padding: if($bg-color-promo == DarkColor, $padd-promo-s,$padd-promo-s * 1);
     font-size: 10px;
   color: #999;
-  margin-left: 105px;
-  margin-top: -118px;
+ margin-left: 105px; 
+    margin-top: -118px;
   width: 204px;
+   
    @if $bg-color-promo == OrangeColor { 
   color: $primary-color;
   margin-left: 136px;
@@ -496,4 +515,649 @@ $title-colors-about: (
 .about-title:hover{
  transform: translateX(10px);
 }
+
+
 /* steps-section*/
+
+
+
+.steps-section {
+  background-color: $DarkColor;
+  padding: 100px 0;
+}
+
+.steps-container {
+    max-width: 1148px;
+    margin: 0 auto;
+    margin-left: -130px;
+}
+
+.steps-title {
+  @include Heading(23px,bold,$primary-color);
+  margin-bottom: 50px;
+  margin-left: 55px;
+  filter: drop-shadow(10px 15px 5px rgba(0,0,0,0.6));
+}
+
+.steps-title-orange {
+  color: $OrangeColor;
+}
+
+.steps-title-orange b {
+  color: $primary-color;
+}
+
+.steps-title-orange span {
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  color: $OrangeColor;
+}
+
+.steps-content {
+  display: flex;
+  justify-content: space-between; 
+  margin-bottom: 50px;
+  color: $OrangeColor;
+
+ 
+  $steps: (
+    "Step 1": "Description for Step 1",
+    "Step 2": "Description for Step 2",
+    "Step 3": "Description for Step 3"
+  );
+
+  @each $step-name, $step-description in $steps {
+    .steps-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .steps-number {
+        font-size: 36px;
+        font-weight: bold;
+        margin-right: 20px;
+
+        // Использование для каждого шага
+        content: $step-name; // Используем название шага
+      }
+
+      .steps-word {
+        font-size: 18px;
+        font-weight: bold;
+
+        // Используем описание шага
+        content: $step-description; 
+      }
+    }
+  }
+}
+
+.steps-number-orange {
+  color: $OrangeColor;
+}
+
+.steps-number-orange:hover {
+  transform: skewX(7deg);
+}
+.steps-text-base {
+    font-weight: bold;
+    color:$OrangeColor; 
+}
+
+.steps-word-orange {
+  @extend .steps-text-base; // Наследуем стили
+  text-decoration: underline;
+  text-decoration-style: double;
+}
+
+.steps-word-white {
+  @extend .steps-text-base; 
+  color: $primary-color;
+  width: 200px;
+  text-align: center;
+}
+
+.steps-arrow {
+  margin: 0 20px;
+}
+
+.steps-button {
+  text-align: left;
+  position: relative; 
+  display: inline-block; 
+}
+
+.steps-btn {
+  font-variant: small-caps;
+  background-color: $DarkColor; 
+  color: $primary-color;
+  border: 2px solid #999;
+  padding: 18px 70px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 55px;
+  border-radius: 7px;
+  transition: transform 0.6s ease;
+  box-shadow: 0 2px 5px darken($DarkColor, 10%); // Добавление тени
+
+  &:hover {
+    transform: translateY(10px); 
+    box-shadow: 0 4px 10px darken($DarkColor, 15%); // Увеличение тени при наведении
+  }
+}
+
+
+/* form section*/
+.form-container {
+        position: absolute;
+        top: 60px; 
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0; 
+        visibility: hidden; 
+        background-color: #fff; 
+        padding: 20px;
+        border-radius: 7px;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        margin-left: 27px;
+        width: 275px; 
+        box-sizing: border-box; 
+    }
+
+    .steps-button:hover .form-container {
+        opacity: 1; 
+        visibility: visible; 
+        top: 70px; 
+    }
+
+ .form-field {
+        margin: 10px 0;
+        width: 100%; 
+    
+
+    input {
+
+        width: 100%;
+        padding: 10px;
+        border: 2px solid #999; 
+        border-radius: 5px;
+        transition: border-color 0.3s ease;
+    
+
+    &:focus {
+        border-color: $DarkColor; 
+        outline: none; 
+    }
+}
+   }
+@function button-background($color, $opacity: 1) {
+    @return rgba($color, $opacity);
+}
+
+
+.form-field button {
+    width: 100%;
+    padding: 10px;
+    background-color: button-background($OrangeColor, 0.8); 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, opacity 0.8s ease;
+}
+
+.form-field button:hover {
+    background-color: button-background($OrangeColor, 1); 
+    opacity: 0.8;
+}
+
+   .form-container h3 {
+        color: #222; 
+        margin-bottom: 15px; 
+        text-align: center; 
+    }
+
+$arrow-colors: (
+    arrow-1: #faab73,
+    arrow-2: #ff6a00,
+    arrow-3: #fc8e3f,
+    arrow-4:#000,
+  
+);
+
+
+@function get-arrow-color($arrow-name) {
+    @return map-get($arrow-colors, $arrow-name);
+}
+
+.steps-arrow {
+    width: 100px;
+    height: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.arrow-right {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-right: 20px solid get-arrow-color(arrow-1); 
+    border-bottom: 10px solid transparent;
+}
+
+.arrow-1 {
+    cursor: pointer;
+    position: relative;
+    width: 80px;
+    height: 50px;
+    margin-top: 0px;
+}
+
+.arrow-1 div {
+    position: relative;
+    top: 20px;
+    width: 70px;
+    height: 5px;
+    background-color: get-arrow-color(arrow-2); 
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+    left: 0;
+    display: block;
+}
+
+.arrow-1 div::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 5px;
+    top: -13px;
+    right: -10px;
+    background-color: get-arrow-color(arrow-3); 
+    transform: rotate(45deg);
+}
+
+.arrow-1 div::before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 5px;
+    top: 13px;
+    right: -10px;
+    background-color: get-arrow-color(arrow-1); 
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+    transform: rotate(-45deg);
+}
+
+.arrow-1:hover {
+    animation: arrow-1 1s linear infinite;
+}
+
+@keyframes arrow-1 {
+    0% {
+        left: 0;
+    }
+    50% {
+        left: 10px;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+/*visualization section*/
+
+
+
+$light-bg: #2e2e30;
+$border-color: #999;
+
+// Функции для получения более светлого и более темного цвета
+@function lighten-color($color, $amount) {
+  @return color.adjust($color, $lightness: $amount);
+}
+
+@function darken-color($color, $amount) {
+  @return color.adjust($color, $lightness: -$amount);
+}
+ 
+
+// Функция для расчета высоты контейнера
+@function container-height($base-height, $padding) {
+  @return math.div($base-height + $padding * 2, 1);
+}
+
+.visualization-section {
+  background-color: $DarkColor;
+  padding: 100px 0;
+}
+
+.visualization-container {
+  max-width: 1920px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  margin-left: -208px;
+}
+
+.visualization-image {
+  flex: 0 0 50%;
+  max-width: 50%;
+  height: container-height(850px, 0);
+}
+
+.visualization-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(130%);
+}
+.vs-con{
+   flex: 0 0 50%;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+.visualization-content1,
+.visualization-content3,
+.visualization-content5 {
+@extend .vs-con;
+  height: container-height(850px, 0); 
+  padding-top: 124px;
+  background-color: $light-bg; 
+}
+
+.visualization-content2,
+.visualization-content4,
+.visualization-content6 {
+@extend .vs-con;
+  height: container-height(850px, 0); 
+  padding-top: 124px;
+  background-color: $DarkColor; 
+}
+
+.visualization-title {
+  @include Heading(30px, bold, $primary-color);
+  margin-bottom: 20px;
+  width: 476px;
+  margin-left: 75px;
+}
+
+.visualization-subtitle {
+  font-size: 18px; 
+  margin-bottom: 20px;
+  color: lighten-color($primary-color, -10%);
+  margin-left: 75px;
+}
+
+.visualization-divider {
+   width: 573px;
+   height: 1px;
+   background-color: darken-color(#666, 10%); 
+   margin: 20px 0;
+}
+
+.visualization-text {
+  font-size: 18px;
+  color: lighten-color($primary-color, -10%); 
+  margin-bottom: 20px;
+  margin-left: 75px;
+  width: 418px;
+}
+
+.visualization-button {
+  text-align: left;
+}
+
+.visualization-btn {
+  background-color: #1a1a1a;
+  color: $primary-color;
+  border: 2px solid $border-color; 
+  padding: 18px 70px;
+  font-size: 16px;
+  cursor: pointer;
+      margin-left: 75px;
+      border-radius: 7px;
+
+}
+.visualization-btn:hover {
+    transform: translateY(-1px) scale(1.02);
+    transition: transform 0.2s ease-out;
+}
+
+
+/* project section*/
+
+
+
+
+.vis-pro-container {
+            display: flex; 
+            width: 100%;
+            max-width: 1050px;
+            margin: 20px 0; 
+            container-type: inline-size; 
+        }
+
+        .text-block-proj {
+
+          min-width: 650px;
+background: radial-gradient(circle, rgba(48,46,46,1) 0%, rgba(46,46,46,1) 45%, rgba(23,23,23,1) 85%);
+            color: #fff; 
+            padding: 20px;
+            border-radius: 10px; 
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+            flex: 2; 
+            margin-right: 20px; 
+            height: 350px; 
+            overflow-y: auto; 
+            container-type: inline-size; 
+        }
+ 
+
+      .project-title-h2{
+          margin-bottom: 70px;
+  container-type: inline-size;
+      & h2{
+  font-size: 30px;
+  text-transform: uppercase;
+  }
+}
+
+
+        .projects-list {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end; 
+            position: relative;
+            flex: 1; 
+        }
+
+        
+
+$box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+$transition: transform 0.6s ease, box-shadow 0.6s ease;
+$hover-scale: 1.05; 
+
+
+$project-images: (
+    "https://i.pinimg.com/564x/77/ac/35/77ac35b7f4bf2c5a3d6521ee9f2bc87e.jpg",
+    "https://i.pinimg.com/736x/b6/4f/fd/b64ffd87a39a0d183ccd1fdf917c9a53.jpg",
+    "https://i.pinimg.com/564x/3a/46/84/3a46845c5d5edf357d8e9b6a8772d0d2.jpg"
+);
+
+
+@mixin project-style($index) {
+    width: 100%;
+    height: 335px; 
+    margin: 15px 0; 
+    background-color: $DarkColor; 
+    border-radius: 10px;
+    box-shadow: $box-shadow;
+    transition: $transition;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    &:hover {
+        transform: translateY(-10px) scale($hover-scale);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+         .project-title {
+            transform: translateY(-10px); 
+        }
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url(nth($project-images, $index)); 
+        background-size: cover;
+        opacity: 0.6; 
+        transition: opacity 0.3s ease; 
+        
+        &:hover {
+            opacity: 1; 
+        }
+    }
+}
+
+
+.project1 {
+    @include project-style(1); 
+}
+
+.project2 {
+    @include project-style(2); 
+}
+
+.project3 {
+    @include project-style(3); 
+}
+
+        .project-title {
+            position: relative;
+            color: $primary-color;
+            font-size: 1.5em; 
+            text-align: center;
+            z-index: 1; 
+            transition: transform 0.3s ease; 
+        }
+
+        .text-block-proj h4 {
+            font-size: 1.5em; 
+            margin-bottom: 10px; 
+        }
+
+        .text-block-proj p {
+          
+            line-height: 1.8;
+        }
+        .p-text-block-proj {
+margin-top: 20px;
+        }
+
+ @container (max-width: 800px) {
+            .text-block-proj {
+         color: #afd642; 
+         min-width: 250px;
+            }
+     .text-block-proj h4{
+  font-size: 1.2em; 
+  }
+  .text-block-proj p {
+          
+            line-height: 1.5;
+        }
+.project-title-h2 h2{
+  font-size: 20px;
+}
+        }
+ @container (max-width: 500px) {
+            .text-block-proj {
+        
+         min-width: 200px;
+            }
+     .text-block-proj h4{
+  font-size: 1em; 
+  }
+  .text-block-proj p {
+          font-size: 13.5px;
+            line-height: 1.3;
+        }
+      }
+/*footer*/
+footer{
+   display: grid;
+  @supports (display: grid) {
+          flex-wrap: wrap;
+    justify-content: center;
+    background: rgb(66,66,66);
+background: linear-gradient(90deg, rgba(66,66,66,1) 0%, rgba(29,29,29,1) 37%, rgba(0,0,0,1) 85%);
+    padding: 10px 0;
+    }
+}
+.footer-grid{
+  padding-left: 68px;
+  line-height: 1.5;
+    margin: 20px 0 20px 0;
+    width: 90vw;
+    display: flex;
+    padding-bottom:20px;
+@supports (display: flex){
+justify-content: space-around;
+}
+}
+.footer-grid p{
+  @include Heading(17px, 300 ,$primary-color);
+}
+.footer-down {
+    margin: 6px -33px;
+    padding: 15px;
+    color: $primary-color;
+    padding-left: 100px;
+}
+.footer-down p{
+    font-size: 16px;
+}
+.logo-foot img {
+    width: 184px;
+    height: 70px;
+    margin-left: -19px;
+}
+.pol_conf_number_email a{
+  color:$OrangeColor;
+}
+
+@media print{
+  nav{
+    display: none;
+  }
+  .btn a{
+    display: none;
+  }
+  .btn span{
+    display: none;
+  }
+  .steps-btn {
+    display: none;
+  }
+  .steps-section{
+    padding:0;
+  }
+  .visualization-btn{
+    display: none;
+  }
+  .realise-projects{
+    margin-top: 600px;
+  }
+  .confidential u{
+    display: none;
+  }
+
+}
